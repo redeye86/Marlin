@@ -805,7 +805,7 @@ static_assert(X_MAX_LENGTH >= X_BED_SIZE && Y_MAX_LENGTH >= Y_BED_SIZE,
     #ifndef NUM_SERVOS
       #error "You must set NUM_SERVOS for a Z servo probe (Z_PROBE_SERVO_NR)."
     #elif Z_PROBE_SERVO_NR == 0 && !PIN_EXISTS(SERVO0)
-      #error "SERVO0_PIN must be defined for your servo or BLTOUCH probe."
+       #error "SERVO0_PIN must be defined for your servo or BLTOUCH probe."
     #elif Z_PROBE_SERVO_NR == 1 && !PIN_EXISTS(SERVO1)
       #error "SERVO1_PIN must be defined for your servo or BLTOUCH probe."
     #elif Z_PROBE_SERVO_NR == 2 && !PIN_EXISTS(SERVO2)
