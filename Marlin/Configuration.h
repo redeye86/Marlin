@@ -86,7 +86,7 @@
  */
 
 // Show the Marlin bootscreen on startup. ** ENABLE FOR PRODUCTION **
-#define SHOW_BOOTSCREEN
+//#define SHOW_BOOTSCREEN
 
 // Show the bitmap in Marlin/_Bootscreen.h on startup.
 //#define SHOW_CUSTOM_BOOTSCREEN
@@ -136,7 +136,7 @@
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
-//#define MACHINE_UUID "00000000-0000-0000-0000-000000000000"
+#define MACHINE_UUID "d6636e6f-28c3-45cc-bece-45b9371424d7"
 
 // @section extruder
 
@@ -493,9 +493,15 @@
   //#define DEFAULT_Ki 1.54
   //#define DEFAULT_Kd 76.55
 
-  #define DEFAULT_Kp 35.53
-  #define DEFAULT_Ki 4.72
-  #define DEFAULT_Kd 66.90
+
+  //Old values
+  //#define DEFAULT_Kp 35.53
+  //#define DEFAULT_Ki 4.72
+  //#define DEFAULT_Kd 66.90
+
+  #define DEFAULT_Kp 31.92
+  #define DEFAULT_Ki 3.59
+  #define DEFAULT_Kd 71.01
 
 #endif // PIDTEMP
 
@@ -550,9 +556,17 @@
   //#define DEFAULT_bedKi 9.88
   //#define DEFAULT_bedKd 173.43
 
-  #define DEFAULT_bedKp 524.52
-  #define DEFAULT_bedKi 103.27
-  #define DEFAULT_bedKd 666.01
+  //#define DEFAULT_bedKp 524.52
+  //#define DEFAULT_bedKi 103.27
+  //#define DEFAULT_bedKd 666.01
+
+  //#define DEFAULT_bedKp 33.54
+  //#define DEFAULT_bedKi 6.54
+  //#define DEFAULT_bedKd 114.71
+
+  #define DEFAULT_bedKp 53.64
+  #define DEFAULT_bedKi 10.14
+  #define DEFAULT_bedKd 189.21
 
 #endif // PIDTEMPBED
 
@@ -990,7 +1004,7 @@
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define MIN_PROBE_EDGE 15
+#define PROBING_MARGIN 15
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
@@ -1147,8 +1161,7 @@
 #if ENABLED(MIN_SOFTWARE_ENDSTOPS)
   #define MIN_SOFTWARE_ENDSTOP_X
   #define MIN_SOFTWARE_ENDSTOP_Y
-  #define MIN_SOFTWARE_ENDSTOP_Z      //Remove?
-
+  //#define MIN_SOFTWARE_ENDSTOP_Z      //Remove?
 #endif
 
 // Max software endstops constrain movement within maximum coordinate bounds
@@ -1692,7 +1705,7 @@
  * you must uncomment the following option or it won't work.
  *
  */
-//#define SDSUPPORT
+#define SDSUPPORT
 
 /**
  * SD CARD: SPI SPEED
@@ -1709,7 +1722,7 @@
  *
  * Use CRC checks and retries on the SD communication.
  */
-//#define SD_CHECK_AND_RETRY
+#define SD_CHECK_AND_RETRY
 
 /**
  * LCD Menu Items
@@ -1718,7 +1731,7 @@
  * just remove some extraneous menu items to recover space.
  */
 //#define NO_LCD_MENUS
-//#define SLIM_LCD_MENUS
+#define SLIM_LCD_MENUS
 
 //
 // ENCODER SETTINGS
